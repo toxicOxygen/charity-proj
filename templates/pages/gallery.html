@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery{% endblock title %}
+
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'gallery/' %}css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/animate.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/owl.carousel.min.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/owl.theme.default.min.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/magnific-popup.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/aos.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/ionicons.min.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/jquery.timepicker.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/flaticon.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/icomoon.css">
+<link rel="stylesheet" href="{% static 'gallery/' %}css/style.css">
+{% endblock extra_headers %}
+
+
+{% block content %}
+    {% include "navbar.html" %}
+
+    <section class="parallax-container" data-parallax-img="{% static '' %}images/bg_3.webp">
+        <div class="parallax-content breadcrumbs-custom context-dark">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-9">
+                <h2 class="breadcrumbs-custom-title">Gallery</h2>
+                <ul class="breadcrumbs-custom-path">
+                  <li><a href="/">Home</a></li>
+                  <li class="active">Gallery</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_1.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_2.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_2.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_3.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_3.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_4.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_4.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_1.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_2.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_2.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_1.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_2.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_2.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_3.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_3.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_4.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_4.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_1.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a href="{% static '' %}images/img_2.jpg" class="image-popup img-hover">
+                    <span class="icon icon-search"></span>
+                    <img src="{% static '' %}images/img_2.jpg" alt="Image placeholder" class="img-fluid">
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                <div class="media block-6">
+                    <div class="icon"><span class="flaticon-first-aid-kit"></span></div>
+                    <div class="media-body">
+                    <h3 class="heading">Medical Mission</h3>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p><a href="#">Learn More</a></p>
+                    </div>
+                </div>     
+                </div>
+
+                <div class="col-md-4">
+                <div class="media block-6">
+                    <div class="icon"><span class="flaticon-donate"></span></div>
+                    <div class="media-body">
+                    <h3 class="heading">Make Donation Now</h3>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p><a href="#">Learn More</a></p>
+                    </div>
+                </div>  
+                </div>
+
+                <div class="col-md-4">
+                <div class="media block-6">
+                    <div class="icon"><span class="flaticon-people"></span></div>
+                    <div class="media-body">
+                    <h3 class="heading">We Need Volunteers</h3>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p><a href="#">Learn More</a></p>
+                    </div>
+                </div> 
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+    {% include "footer.html" %}
+{% endblock content %}
+
+
+
+{% block extra_footers %}
+{% comment %} <script src="{% static 'gallery/' %}js/jquery.min.js"></script>
+<script src="{% static 'gallery/' %}js/jquery-migrate-3.0.1.min.js"></script>
+<script src="{% static 'gallery/' %}js/popper.min.js"></script>
+<script src="{% static 'gallery/' %}js/bootstrap.min.js"></script>
+<script src="{% static 'gallery/' %}js/jquery.easing.1.3.js"></script>
+<script src="{% static 'gallery/' %}js/jquery.waypoints.min.js"></script>
+<script src="{% static 'gallery/' %}js/jquery.stellar.min.js"></script>
+<script src="{% static 'gallery/' %}js/owl.carousel.min.js"></script>
+<script src="{% static 'gallery/' %}js/jquery.magnific-popup.min.js"></script>
+<script src="{% static 'gallery/' %}js/bootstrap-datepicker.js"></script>
+<script src="{% static 'gallery/' %}js/aos.js"></script>
+<script src="{% static 'gallery/' %}js/jquery.animateNumber.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{% static 'gallery/' %}js/google-map.js"></script>
+<script src="{% static 'gallery/' %}js/main.js"></script> {% endcomment %}
+{% endblock extra_footers %}

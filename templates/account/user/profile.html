@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Profile" %}{% endblock %}
+
+{% block extra_headers %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/css/profile.css' %}">
+<style>
+	.bg{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+{% endblock extra_headers %}
+
+
+{% block content %}
+	<br>
+
+	<div class="col-md-12">  
+		<div class="col-md-4">      
+			<div class="portlet light profile-sidebar-portlet bordered">
+				<div class="profile-userpic bg">
+					{% if user.photo %}
+						<img class="img-responsive" src="{{user.photo.url}}" style="width: 180px;height: 180px;object-fit: cover;">
+					{% else %}
+						<img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-responsive">
+					{% endif %}
+				</div>
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name"> 
+						{% if user.first_name %}
+							{{user.first_name}} {% if user.last_name %}{{user.last_name}}{% endif %}
+						{% else %}
+							John Doe
+						{% endif %}
+					</div>
+					<div class="profile-usertitle-job"> Developer </div>
+				</div>
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-info  btn-sm">Follow</button>
+					<button type="button" class="btn btn-info  btn-sm">Message</button>
+				</div>
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<!-- <li class="active">
+							<a href="#">
+								<i class="icon-home"></i> Ticket List </a>
+						</li> -->
+						<!-- <li>
+							<a href="#">
+								<i class="icon-settings"></i> Support Staff </a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-info"></i> Configurations </a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8"> 
+			<div class="portlet light bordered">
+				<div class="portlet-title tabbable-line">
+					<div class="caption caption-md">
+						<i class="icon-globe theme-font hide"></i>
+						<span class="caption-subject font-blue-madison bold uppercase">Your info</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div>
+					
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Profile</a></li>
+							<!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Test</a></li> -->
+							<!-- <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li> -->
+							<!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+						</ul>
+					
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active pt-1" id="home">
+								<form method="POST" enctype="multipart/form-data">
+									{% csrf_token %}
+									{{form|crispy}}
+									<button type="submit" class="btn btn-default">Save</button>
+									<a href="/" class="btn btn-primary ml-1">Go Back</a>
+								</form>
+							</div>
+							<!-- <div role="tabpanel" class="tab-pane" id="profile">Profile</div> -->
+							<!-- <div role="tabpanel" class="tab-pane" id="messages">Messages</div> -->
+							<!-- <div role="tabpanel" class="tab-pane" id="settings">Settings</div> -->
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+
+{% endblock content %}
+
+
+{% block extra_footers %}
+<script src="{% static 'auth/' %}vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="{% static 'auth/' %}vendor/bootstrap/js/popper.js"></script>
+<script src="{% static 'auth/' %}vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'auth/' %}vendor/select2/select2.min.js"></script>
+<script src="{% static 'auth/' %}vendor/tilt/tilt.jquery.min.js"></script>
+<script >
+	$('.js-tilt').tilt({
+		scale: 1.1
+	})
+</script>
+<script src="{% static 'auth/' %}js/main.js"></script>
+{% endblock extra_footers %}
